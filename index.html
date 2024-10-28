@@ -1,61 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsividade.css" />
+    <script src="main.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
 
-  <title>Frontend Mentor | Intro component with sign up form</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsividade.css">
-  <script src="main.js" defer></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+      .attribution a {
+        color: #fe514f;
+      }
+    </style>
+  </head>
 
-    .attribution a {
-      color: #FE514F;
-    }
-  </style>
-</head>
+  <body>
+    <main id="main">
+      <section class="aprender">
+        <div class="conteudo">
+          <h1>Learn to code by watching others.</h1>
+          <p class="p2">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+      </section>
 
-<body>
-  <main id="main">
-    
-    <section class="aprender">
-      <div class="conteudo">
-        <h1>Learn to code by watching others.</h1>
-        <p class="p2">See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-          but understanding how developers think is invaluable.</p>
+      <div id="formulario">
+        <button type="submit" class="btn-free">
+          Try it free 7 days then $20/mo. thereafter
+        </button>
+        <form id="form">
+          <div class="form-group">
+            <input
+              type="text"
+              id="first-name"
+              placeholder="First Name"
+              class="inputs required"
+            />
+            <span class="span-required"
+              >First Name cannot be empty
+              <img src="images/aviso.png" alt="alert" width="16" height="16"
+            /></span>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="last-name"
+              placeholder="Last Name"
+              class="inputs required"
+            />
+            <span class="span-required"
+              >Last Name cannot be empty
+              <img src="images/aviso.png" alt="alert" width="16" height="16"
+            /></span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="E-mail Address" class="inputs required" />
+            <span class="span-required">
+                E-mail cannot be empty 
+                <img src="images/aviso.png" alt="alert" width="16" height="16">
+            </span>
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" placeholder="Password" class="inputs required" />
+            <span class="span-required">
+                Password cannot be empty 
+                <img src="images/aviso.png" alt="alert" width="16" height="16">
+            </span>
+        </div>
+          <button type="submit" class="btn-submit">
+            CLAIM YOUR FREE TRIAL
+          </button>
+          <p>
+            By clicking the button, you are agreeing to our
+            <a href="https://www.opovo.com.br/">Terms and Services</a>
+          </p>
+        </form>
       </div>
-    </section>
-
-    <div id="formulario">
-      <button type="submit" class="btn-free">Try it free 7 days then $20/mo. thereafter</button>
-      <form id="form">
-
-        <input type="text" id="first-name" placeholder="First Name">
-        <input type="text" id="last-name" placeholder="Last Name">
-        <input type="email" id="email" placeholder="E-mail Address">
-        <input type="password" id="password" placeholder="Password">
-        <button type="submit" class="btn-submit">CLAIM YOUR FREE TRIAL</button>
-        <p>By clicking the button, you are agreeing to our <a href="https://www.opovo.com.br/">Terms and Services</a>
-        </p>
-
-      </form>
-    </div>
-  </main>
-</body>
-
+    </main>
+  </body>
 </html>
