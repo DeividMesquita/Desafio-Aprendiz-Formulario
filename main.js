@@ -1,54 +1,44 @@
-const form = document.querySelector("#form")
+const form = document.querySelector("#form");
 
 form.addEventListener("submit", (event) => {
-    event.preventDefault()
+    event.preventDefault(); // Impede o envio padrão do formulário
 
-    
-    const firstNameInput = document.querySelector("#first-name")
-    const lastNameInput = document.querySelector("#last-name")
-    const emailInput = document.querySelector("#email")
-    const passwordInput = document.querySelector("#password")
+    const firstNameInput = document.querySelector("#first-name");
+    const lastNameInput = document.querySelector("#last-name");
+    const emailInput = document.querySelector("#email");
+    const passwordInput = document.querySelector("#password");
 
-
-    //verifica se o primeiro nome tá vazio
-    if (firstNameInput.value === "") {
-        alert("Por favor, preencha seu primeiro nome")
+    // Verifica se o primeiro nome tá vazio
+    if (!firstNameInput.value.trim()) {
+        alert("Por favor, preencha seu primeiro nome");
         return;
     }
-    //verifica se o segundo nome tá vazio
-    if (lastNameInput.value === "") {
-        alert("Por favor, preencha seu segundo nome")
+    // Verifica se o segundo nome tá vazio
+    if (!lastNameInput.value.trim()) {
+        alert("Por favor, preencha seu segundo nome");
         return;
     }
-    //verifica se o email está nos padrões
-    if (emailInput.value === "" || !isEmailValid(emailInput.value)) {
-        alert("Parece que isso não é um e-mail")
+    // Verifica se o email está nos padrões
+    if (!emailInput.value.trim() || !isEmailValid(emailInput.value)) {
+        alert("Parece que isso não é um e-mail válido");
         return;
     }
-    //verifica a senha
+    // Verifica a senha
     if (!validatePassword(passwordInput.value, 8)) {
-        alert("A senha precisa ter no mínimo 8 digitos")
+        alert("A senha precisa ter no mínimo 8 dígitos");
         return;
     }
-    //envia o formulario
-    form.submit()
-})
-//função que valida email
+    // Envia o formulário
+    form.submit();
+});
+
+// Função que valida email
 function isEmailValid(email) {
-    const emailRegex = new RegExp(
-        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
-    );
-    if (emailRegex.test(email)) {
-        return true;
-    } else {
-        return false;
-    }
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
 }
-//função que valida senha
+
+// Função que valida senha
 function validatePassword(password, minDigits) {
-    if (password.length >= minDigits) {
-        return true;
-    } else {
-        return false;
-    }
+    return password.length >= minDigits;
 }
