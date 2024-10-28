@@ -1,11 +1,15 @@
 const form = document.querySelector("#form")
-const firstNameInput = document.querySelector("#first-name")
-const lastNameInput = document.querySelector("#last-name")
-const emailInput = document.querySelector("#email")
-const passwordInput = document.querySelector("#password")
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
+
+    
+    const firstNameInput = document.querySelector("#first-name")
+    const lastNameInput = document.querySelector("#last-name")
+    const emailInput = document.querySelector("#email")
+    const passwordInput = document.querySelector("#password")
+
+
     //verifica se o primeiro nome tá vazio
     if (firstNameInput.value === "") {
         alert("Por favor, preencha seu primeiro nome")
@@ -26,8 +30,6 @@ form.addEventListener("submit", (event) => {
         alert("A senha precisa ter no mínimo 8 digitos")
         return;
     }
-
-
     //envia o formulario
     form.submit()
 })

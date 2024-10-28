@@ -1,6 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
 body {
     background-image: url(images/bg-intro-desktop.png);
     background-color: #FF7978;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0rem;
@@ -47,7 +56,7 @@ form {
     padding: 40px;
     gap: 50px;
     width: 505px;
-    height: 565px;
+    height: 580px;
     margin: 0 auto;
     box-shadow: 5px 8px 0px #FB010147;
     border-radius: 15px;
@@ -57,7 +66,7 @@ form {
 .btn-free {
     padding: 14px;
     margin-bottom: 35px;
-    width: 585px;
+    width: 505px;
     height: 50px;
     font-weight: bolder;
     background: #5D54A3 0% 0% no-repeat padding-box;
@@ -82,7 +91,6 @@ form {
 }
 
 input {
-    width: 90%;
     padding: 14px;
     border: 1px solid #3A3A3A;
     border-radius: 5px;
@@ -100,6 +108,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     padding: 50px;
     box-sizing: border-box;
 }
