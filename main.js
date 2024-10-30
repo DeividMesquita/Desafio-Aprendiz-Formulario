@@ -22,8 +22,8 @@ form.addEventListener("submit", (event) => {
 
     if (emailValue === "") {
         showError(emailIndex);
-        spans[emailIndex].innerText = "Email cannot be empty"; // Exibe erro de campo vazio
-        isFormValid = false;
+        showError(index); // Exibe o span de erro se o campo estiver vazio
+        isFormValid = false; // Formulário inválido
     } else if (!isEmailValid(emailValue)) {
         showError(emailIndex);
         spans[emailIndex].innerText = "Invalid email format"; // Exibe erro de formato inválido
