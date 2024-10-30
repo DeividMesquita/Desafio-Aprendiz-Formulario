@@ -1,6 +1,7 @@
 const form = document.querySelector("#form");
 const campos = document.querySelectorAll(".inputs");
 const spans = document.querySelectorAll(".span-required");
+const emailField = document.querySelector("#email");
 
 form.addEventListener("submit", (event) => {
     event.preventDefault(); // Impede o envio padrão do formulário
@@ -15,10 +16,33 @@ form.addEventListener("submit", (event) => {
         }
     });
 
+    // Validação específica para o e-mail
+    const emailValue = emailField.value.trim(); // Remove espaços em branco no início/fim
+    const emailIndex = Array.from(campos).indexOf(emailField); // Encontra o índice do campo de email
+
+    if (emailValue === "") {
+        showError(emailIndex);
+        spans[emailIndex].innerText = "Email cannot be empty"; // Exibe erro de campo vazio
+        isFormValid = false;
+    } else if (!isEmailValid(emailValue)) {
+        showError(emailIndex);
+        spans[emailIndex].innerText = "Invalid email format"; // Exibe erro de formato inválido
+        isFormValid = false;
+    } else {
+        hideError(emailIndex);
+    }
+
+    // Se o formulário estiver válido, pode enviar
     if (isFormValid) {
         form.submit(); // Envia o formulário se todos os campos estiverem corretos
     }
 });
+
+// Função que valida e-mail
+function isEmailValid(email) {
+    const emailRegex = /^[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+}
 
 function showError(index) {
     campos[index].classList.add("input-error");
@@ -28,15 +52,4 @@ function showError(index) {
 function hideError(index) {
     campos[index].classList.remove("input-error");
     spans[index].classList.remove("show");
-}
-
-// Função que valida email
-function isEmailValid(email) {
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/;
-    return emailRegex.test(email);
-}
-
-// Função que valida senha
-function validatePassword(password, minDigits) {
-    return password.length >= minDigits;
 }
