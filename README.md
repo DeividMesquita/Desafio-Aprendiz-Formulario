@@ -22,10 +22,14 @@ Os usuários devem ser capazes de:
 - URL do site em produção: [Add live site URL here](https://your-live-site-url.com)
 
 ## Meu processo
-1º Comecei com a estrutura em html, fazendo todo o esqueleto do projeto sendo o mais semântico possível.
-2º Fui fazendo todo o estilo da pagina personalizando de acordo com o layout que me foi passado
-3º Adicionei a responsividade para varios tamanhos de tela. Exemplo: laptop 1024px, tablet 768px e para celular 375px
-4º Comecei a fazer a integração do JS no projeto, colocando ID no formulário e nos inputs para poder fazer aparecer um span quando o formulário não estivesse preenchido devidamente.
+1º Comecei com a estrutura em html, fazendo todo o esqueleto do projeto sendo o mais semântico possível//
+
+2º Fui fazendo todo o estilo da pagina personalizando de acordo com o layout que me foi passado//
+
+3º Adicionei a responsividade para varios tamanhos de tela. Exemplo: laptop 1024px, tablet 768px e para celular 375px//
+
+4º Comecei a fazer a integração do JS no projeto, colocando ID no formulário e nos inputs para poder fazer aparecer um span quando o formulário não estivesse preenchido devidamente//
+
 ### Construído com
 
 - HTML5 semântico
