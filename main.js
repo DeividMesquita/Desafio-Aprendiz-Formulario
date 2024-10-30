@@ -15,26 +15,6 @@ form.addEventListener("submit", (event) => {
         }
     });
 
-    const emailIndex = Array.from(campos).indexOf(document.querySelector("#email"));
-    if (!isEmailValid(document.querySelector("#email").value)) {
-        showError(emailIndex);
-        spans[emailIndex].innerText = "Invalid email format"; // Exibe erro de formato de email
-        isFormValid = false;
-    }
-
-    const passwordIndex = Array.from(campos).indexOf(document.querySelector("#password"));
-    if (!document.querySelector("#password").value.trim()) {
-        showError(passwordIndex);
-        spans[passwordIndex].innerText = "Password cannot be empty"; // Exibe erro de campo vazio
-        isFormValid = false;
-    } else if (!validatePassword(document.querySelector("#password").value, 8)) {
-        showError(passwordIndex);
-        spans[passwordIndex].innerText = "Password must be at least 8 characters"; // Exibe erro de senha inválida
-        isFormValid = false;
-    } else {
-        hideError(passwordIndex);
-    }
-
     if (isFormValid) {
         form.submit(); // Envia o formulário se todos os campos estiverem corretos
     }

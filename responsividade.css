@@ -1,4 +1,9 @@
 @media (max-width: 1200px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
     .aprender {
         text-align: center;
         margin-bottom: 40px;
@@ -6,7 +11,7 @@
 
     main {
         flex-direction: column;
-        height: 180vh;
+        height: 100vh;
     }
 
     .btn-free, form {
@@ -58,10 +63,14 @@
 
 @media (max-width: 375px) {
 
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
    main{
-    margin-top: 120px;
-    padding-top: 200px;
-    height: 130vh;
+    padding-top: 100px;
+    height: 100vh;
    }
 
     form {
